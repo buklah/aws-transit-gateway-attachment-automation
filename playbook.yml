@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  gather_facts: True
+  vars_files:
+    - vars/all_regions.yml
+#
+- name: Create eu-west-1 Stack
+  import_playbook: tasks/eu-west-1.yml
+
+- name: Create us-west-2 Stack
+  import_playbook: tasks/us-west-2.yml
+
+- name: Create us-east-1 Stack
+  import_playbook: tasks/us-east-1.yml
+
+- name: Create sa-east-1 Stack
+  import_playbook: tasks/sa-east-1.yml
+
+- name: Create eu-central-1 Stack
+  import_playbook: tasks/eu-central-1.yml
+
+- name: Create ap-southeast-1 Stack
+  import_playbook: tasks/ap-southeast-1.yml
+
+- name: Create ap-south-1 Stack
+  import_playbook: tasks/ap-south-1.yml 
